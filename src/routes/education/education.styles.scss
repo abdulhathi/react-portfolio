@@ -1,27 +1,31 @@
-.aboutme-section {
-  // height: 100vh;
+.education-section {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
-.aboutme-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  // column-gap: 5rem;
+  // justify-content: center;
   align-items: center;
   padding: 2rem;
 }
-.aboutme-image-container {
-  width: 95%
+.education-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  column-gap: 2rem;
+  align-items: center;
+  transition: all 0.3s;
 }
-.aboutme-details {
-  p {
-    width: 30rem;
-  }
+.education-image {
+  width: 100%;
 }
+.education-description {
+  width: 100%;
+}
+
 @media screen and (min-width: 768px) {
-  .aboutme-container {
+  .education-section {
+    justify-content: center;
+  }
+  .education-container {
     flex-direction: row;
   }
 }

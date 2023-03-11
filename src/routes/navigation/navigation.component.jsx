@@ -7,18 +7,18 @@ import NavMenu from "./nav-menu/nav-menu.component";
 
 const Navigation = () => {
   return (
-    // <Fragment>
-    <div className="navbar">
-      <div className="navigation-container">
-        <Link className="logo-container" to="/">
-          <NavLogo></NavLogo>
-        </Link>
-        <NavToggler></NavToggler>
-        <NavMenu></NavMenu>
+    <Fragment>
+      <div className="navbar">
+        <div className="navigation-container">
+          <Link className="logo-container" to="/">
+            <NavLogo></NavLogo>
+          </Link>
+          <NavToggler></NavToggler>
+          <NavMenu></NavMenu>
+        </div>
+        <Outlet></Outlet>
       </div>
-      <Outlet></Outlet>
-    </div>
-    // </Fragment>
+    </Fragment>
   );
 };
 export default Navigation;

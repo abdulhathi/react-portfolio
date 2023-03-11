@@ -1,5 +1,5 @@
 /* List styles start */
-.list {
+.uolist {
   list-style: none;
   font-size: 1.6rem;
   font-weight: 500;
@@ -8,16 +8,16 @@
   align-content: center;
   align-items: center;
 }
-.list--item {
+.uolist--item {
   margin: 1rem;
 }
 @media screen and (min-width:575px) {
-  .list--1x1 {
+  .uolist--1x1 {
       grid-template-columns: repeat(1, auto);
   }
 }
 @media screen and (min-width:575px) {
-  .list--1x2 {
+  .uolist--1x2 {
       grid-template-columns: repeat(2, auto);
   }
 }

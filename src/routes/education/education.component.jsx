@@ -1,35 +1,21 @@
-import Backend from "../../assets/backend.png";
+import EducationImage from "../../assets/education.png";
+import HeadingOneUltimate from "../../core-components/headings/heading-one-ultimate/heading-one-ultimate.component";
 import HeadingOnePrimary from "../../core-components/headings/heading-one-primary/heading-one-primary.component";
+import HeadingTwo from "../../core-components/headings/heading-two/heading-two.component";
+import HeadingThree from "../../core-components/headings/heading-three/heading-three.component";
 import "./education.styles.scss";
 
 const Education = () => {
   return (
-    <section className="aboutme-section">
-      <HeadingOnePrimary text="Abdul Me"></HeadingOnePrimary>
-      <div className="aboutme-container">
-        <img
-          className="aboutme-image-container"
-          src={Backend}
-          alt="Web developer"
-        />
-        <div className="aboutme-details">
-          <HeadingOnePrimary text="UI/UX Designer & Web Developer"></HeadingOnePrimary>
-          <p>
-            Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet
-            dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea
-            lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam
-            dolor justo et dolor dolor dolor
-          </p>
-          <ul>
-            <li>Name: Kate Winslet</li>
-            <li>Birthday: 1 April 1990</li>
-            <li>Degree: Master</li>
-            <li>Experience: 10 Years</li>
-            <li>Phone: +012 345 6789</li>
-            <li>Email: info@example.com</li>
-            <li>Address: 123 Street, New York, USA </li>
-            <li>Freelance: Available</li>
-          </ul>
+    <section className="education-section">
+      <HeadingOneUltimate text="Education"></HeadingOneUltimate>
+      <div className="education-container">
+        <img className="education-image" src={EducationImage} alt="" />
+        <div className="education-description">
+          <HeadingOnePrimary text="B-Tech"></HeadingOnePrimary>
+          <HeadingTwo text="Information Technology"></HeadingTwo>
+          <HeadingTwo text="Anna University"></HeadingTwo>
+          <HeadingThree text="Year : 2001 - 2005"></HeadingThree>
         </div>
       </div>
     </section>
