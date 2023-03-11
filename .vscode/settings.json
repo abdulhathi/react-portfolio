@@ -1,0 +1,12 @@
+{
+  "editor.tabSize": 2,
+  "workbench.colorTheme": "Snazzy Operator",
+  "editor.fontLigatures": true,
+  "explorer.compactFolders": false,
+  "files.autoSave": "afterDelay",
+// "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  // "window.zoomLevel": 0.5,
+  "editor.fontFamily": "Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontSize": 15
+}

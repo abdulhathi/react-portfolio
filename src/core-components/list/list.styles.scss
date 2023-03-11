@@ -1,0 +1,29 @@
+/* List styles start */
+.list {
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-left: 0;
+  display: grid;
+  align-content: center;
+  align-items: center;
+}
+.list--item {
+  margin: 1rem;
+}
+@media screen and (min-width:575px) {
+  .list--1x1 {
+      grid-template-columns: repeat(1, auto);
+  }
+}
+@media screen and (min-width:575px) {
+  .list--1x2 {
+      grid-template-columns: repeat(2, auto);
+  }
+}
+.fa--primary {
+  color: var(--color--primary);
+  font-family: var(--font-fa);
+  margin-right: 0.5rem;
+}
+/* List styles end */

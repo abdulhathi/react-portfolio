@@ -1,0 +1,29 @@
+.navigation-container {
+  margin: 0rem 1rem;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  // height: 10px;
+  // opacity: 0;
+  // max-height: 0;
+}
+.navbar {
+  // height: 100vh;
+  // display: grid;
+  // grid-template-rows: repeat(2, 6% 94%);
+}
+.content-container {
+  // height: 94.5vh;
+}
+.NavMenu {
+  z-index: 100;
+}
+// @media screen and (min-width:768px) {
+//   .nav-link-container {
+//     display: flex;
+//     flex-direction: row;
+//     opacity: 1;
+//     max-height: 100vh;
+//   }
+// }

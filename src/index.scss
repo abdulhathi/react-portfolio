@@ -1,0 +1,58 @@
+code {
+  font-family: 'Saira Condensed', sans-serif;
+}
+
+:root {
+  --color--primary: #2124B1;
+  --color--primary--dark:#1D1F97;
+
+  --color--secondary: #4777F5;
+  --color--secondary--light: #638BF7;
+  --color--light: #F7FAFF;
+
+  --color--header--primary: #fff;
+  --color--header--secondary: #1D1D27;
+
+  --color--text--primary: #888888;
+
+  --font--secondary: "Heebo", sans-serif;
+  --font-fa: "Font Awesome 5 Free";
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Saira Condensed', sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0rem;
+}
+// body {
+//   margin: 0;
+//   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+//     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+//     sans-serif;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+// * {
+//   box-sizing: border-box;
+// }
