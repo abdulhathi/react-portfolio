@@ -10,6 +10,7 @@ const NavMenu = () => {
     { id: 5, linkName: "Skills", link: "/skills" },
     { id: 6, linkName: "Certification", link: "/certification" },
     { id: 7, linkName: "Contact Us", link: "/contactus" },
+    { id: 8, linkName: "Sign In", link: "/signin" },
   ];
   return (
     <div className="nav--menu list">
@@ -20,12 +21,15 @@ const NavMenu = () => {
             className="nav--menu--item"
             to={link}
             onClick={(event) => {
+              // console.log(event.target)
               const navbar = document.querySelector(".navbar");
               const navToggler = document.querySelector(".nav--toggler");
-              navbar.classList.toggle("nav--menu--opener");
-              // navToggler.classList.toggle("nav--menu--opener");
-              navToggler.classList.toggle("fa-bars");
-              navToggler.classList.toggle("fa-xmark");
+              // if (!navbar.classList.contains("nav--menu--opener")) {
+                navbar.classList.toggle("nav--menu--opener");
+                // navToggler.classList.toggle("nav--menu--opener");
+                navToggler.classList.toggle("fa-bars");
+                navToggler.classList.toggle("fa-xmark");
+              // }
             }}
           >
             {linkName}

@@ -1,0 +1,24 @@
+.signup-container {
+  min-height: 93.5vh;
+  // overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.signup-heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.signup-form-container {
+  // height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.signup-btngroup-container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+}

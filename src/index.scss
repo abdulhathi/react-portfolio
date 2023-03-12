@@ -15,7 +15,7 @@ code {
 
   --color--text--primary: #888888;
 
-  --font--secondary: "Heebo", sans-serif;
+  // --font--secondary: "Heebo", sans-serif;
   --font-fa: "Font Awesome 5 Free";
 }
 
@@ -33,6 +33,9 @@ body {
 -webkit-font-smoothing: antialiased;
 -moz-osx-font-smoothing: grayscale;
   font-size: 1.6rem;
+}
+input {
+  font-family: 'Saira Condensed', sans-serif;
 }
 a {
   text-decoration: none;

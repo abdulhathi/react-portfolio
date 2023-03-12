@@ -1,4 +1,22 @@
 {
+   // Auto suggession off Start
+  //  "editor.quickSuggestions": {
+  //   "comments": "off",
+  //   "strings": "off",
+  //   "other": "off"
+  // },
+  // "editor.quickSuggestionsDelay": 90,
+  // "editor.parameterHints.enabled": false,
+  // "editor.autoClosingBrackets": "never",
+  // "editor.suggestOnTriggerCharacters": false,
+  // "editor.acceptSuggestionOnEnter": "off",
+  // "debug.console.historySuggestions": false,
+  // "omnisharp.autoStart": false,
+  // "workbench.editorAssociations": {
+  //   "*.html": "default"
+  // },
+  // "git.autofetch": true,
+  // Auto suggession off End
   "editor.tabSize": 2,
   "workbench.colorTheme": "Snazzy Operator",
   "editor.fontLigatures": true,

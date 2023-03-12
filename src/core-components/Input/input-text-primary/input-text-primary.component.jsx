@@ -1,10 +1,18 @@
-import { Component } from "react";
 import "./input-text-primary.styles.scss";
 
-class InputTextPrimary extends Component {
-  render() {
-    return <input type="text"></input>;
-  }
-}
+const InputTextPrimary = ({ name, id, placeholder, type, required, value, onChange }) => {
+  return (
+    <input
+      type={type}
+      placeholder={placeholder}
+      name={name}
+      id={id}
+      className="input-text"
+      required={required}
+      value={value}
+      onChange={onChange}
+    ></input>
+  );
+};
 
 export default InputTextPrimary;

@@ -8,7 +8,9 @@ import "./main.styles.scss";
 const Main = () => {
   return (
     <main className="main-container">
-      <img className="portfolio-image-container" src={Abdul}></img>
+      <div>
+        <img className="portfolio-image-container" src={Abdul}></img>
+      </div>
       <header className="header-container">
         <h3>I'm</h3>
         <h1 className="name-container">Abdul Hathi</h1>

@@ -1,0 +1,66 @@
+
+/* Buttons styles start */
+button, .btn {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  font-family: var(--font--secondary);
+  font-weight: 500;
+  border-radius: 100px;
+  border-width: 1.2px;
+  border-style: solid;
+  cursor: pointer;
+  margin: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+.btn--light {
+  background: var(--color--light);
+  border-color: var(--color--light)
+}
+.btn--outline--light {
+  background: var(--color--primary);
+  color: var(--color--light);
+  border-color: var(--color--light);
+}
+.btn--outline--light:hover {
+  background: var(--color--light);
+  color: var(--color--header--secondary);
+  border-color: var(--color--light);
+}
+.btn--outline--primary {
+  background: var(--color--light);
+  color: var(--color--primary);
+  border-color: var(--color--primary);
+}
+.btn--outline--primary:hover {
+  background: var(--color--primary);
+  color: var(--color--light);
+}
+.btn--primary {
+  background: var(--color--primary);
+  color: var(--color--light);
+  border-color: var(--color--primary);
+}
+.btn--primary:hover {
+  background: var(--color--primary--dark);
+  color: var(--color--light);
+}
+.btn--secondary {
+  background: var(--color--secondary);
+  color: var(--color--light);
+  border-color: var(--color--secondary);
+}
+.btn--secondary:hover {
+  background: var(--color--secondary--light);
+  color: var(--color--light);
+}
+
+.searchIcon {
+  height: 2rem;
+  margin-right: 0.5rem;
+  color: #fff;
+  fill: #fff;
+}
+/* Buttons styles end */

@@ -7,6 +7,8 @@ import Experience from "./experience/experience.component";
 import Skills from "./skills/skills.component";
 import ContactUs from "./contact-us/contact-us.component";
 import Certification from "./certification/certification.component";
+// import SignIn from "./sign-in/sign-in.component";
+import SignUpSignIn from "../components/sign-up-sign-in/sign-up-sign-in.component";
 
 const PortfolioRoutes = () => {
   return (
@@ -19,6 +21,7 @@ const PortfolioRoutes = () => {
         <Route path="contactus" element={<ContactUs />}></Route>
         <Route path="certification" element={<Certification />}></Route>
         <Route path="aboutme" element={<AboutMe />}></Route>
+        <Route path="signin" element={<SignUpSignIn />}></Route>
       </Route>
     </Routes>
   );

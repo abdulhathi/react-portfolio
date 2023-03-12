@@ -10,13 +10,15 @@ const Navigation = () => {
     <Fragment>
       <div className="navbar">
         <div className="navigation-container">
-          <Link className="logo-container" to="/">
+          <Link className="logo-container" to="/home">
             <NavLogo></NavLogo>
           </Link>
           <NavToggler></NavToggler>
           <NavMenu></NavMenu>
         </div>
-        <Outlet></Outlet>
+        <div className="outlet-container">
+          <Outlet></Outlet>
+        </div>
       </div>
     </Fragment>
   );
