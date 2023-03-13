@@ -5,11 +5,26 @@ import {
   googleSignInWithPopup,
   googleSignInWithRedirect,
   createUserDocInFireStore,
+  googleSignInWithEmailAndPassword,
 } from "../../../utils/firebase-utils";
 import { getRedirectResult } from "firebase/auth";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import HeadingOnePrimary from "../../../core-components/headings/heading-one-primary/heading-one-primary.component";
+import HeadingThree from "../../../core-components/headings/heading-three/heading-three.component";
+import InputTextPrimary from "../../../core-components/Input/input-text-primary/input-text-primary.component";
+import ButtonSecondary from "../../../core-components/buttons/button-secondary/button-secondary.component";
+import GoogleIcon from "../../../assets/icon/Google.svg";
+import AppleIcon from "../../../assets/icon/Apple.svg";
+
+const signInFormObject = {
+  email: "",
+  password: "",
+};
 
 const SignIn = () => {
+  const [signInFormFields, setSignInFormFields] = useState(signInFormObject);
+  const { email, password } = signInFormFields;
+
   useEffect(() => {
     getRedirectResult(firebaseAuth).then((result) => {
       if (result) {
@@ -18,7 +33,7 @@ const SignIn = () => {
     });
   }, []);
 
-  const onSignInClick = (event) => {
+  const onSignInWithGoogle = (event) => {
     googleSignInWithPopup().then((result) => {
       createUserDocInFireStore(result.user);
     });
@@ -27,16 +42,88 @@ const SignIn = () => {
   const onSignInClickForRedirect = async (event) => {
     googleSignInWithRedirect();
   };
+
+  const onSignInClick = (event) => {
+    event.preventDefault();
+    googleSignInWithEmailAndPassword(email, password)
+      .then((result) => {
+        console.log(result.user);
+      })
+      .catch((error) => {
+        switch (error.code) {
+          case "auth/popup-closed-by-user":
+            alert("Popup closed by user.");
+            break;
+          case "auth/user-not-found":
+            alert("Invalid user.");
+            break;
+          case "auth/wrong-password":
+            alert("Invalid password.");
+            break;
+          default:
+            alert(error);
+            break;
+        }
+      });
+  };
+
+  const onResetFormFields = (event) => {
+    event.preventDefault();
+    setSignInFormFields(signInFormObject);
+  };
+  const signInFormFieldOnChange = (event) => {
+    const { name, value } = event.target;
+    // console.log(name, value);
+    setSignInFormFields({ ...signInFormFields, [name]: value });
+  };
   return (
-    <div className="signIn-container">
-      <ButtonPrimary
-        text="Sign in with Google popup"
-        onClick={onSignInClick}
-      ></ButtonPrimary>
-      <ButtonPrimary
+    <div className="signin-container">
+      <div className="signin-heading-container">
+        <HeadingOnePrimary text="Sign In"></HeadingOnePrimary>
+        <HeadingThree text="Sign In with your email and password"></HeadingThree>
+      </div>
+      <form
+        onSubmit={onSignInClick}
+        onReset={onResetFormFields}
+        className="signin-form-container"
+      >
+        <InputTextPrimary
+          type="text"
+          placeholder="Email"
+          required
+          name="email"
+          id="signin-email"
+          value={email}
+          onChange={signInFormFieldOnChange}
+        />
+        <InputTextPrimary
+          type="password"
+          placeholder="Password"
+          required
+          name="password"
+          id="signin-password"
+          value={password}
+          onChange={signInFormFieldOnChange}
+        />
+        <div className="signin-btngroup-container">
+          <ButtonPrimary text="Sign in" type="submit"></ButtonPrimary>
+          <ButtonSecondary text="Reset" type="reset"></ButtonSecondary>
+          <ButtonPrimary
+            text="Sign in with Google"
+            onClick={onSignInWithGoogle}
+            icon={GoogleIcon}
+          ></ButtonPrimary>
+          <ButtonPrimary
+            text="Sign in with Apple"
+            onClick={onSignInWithGoogle}
+            icon={AppleIcon}
+          ></ButtonPrimary>
+        </div>
+      </form>
+      {/* <ButtonPrimary
         text="Sign in with Google redirect"
         onClick={onSignInClickForRedirect}
-      ></ButtonPrimary>
+      ></ButtonPrimary> */}
     </div>
   );
 };

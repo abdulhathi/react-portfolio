@@ -1,6 +1,11 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider } from 'firebase/auth';
+import { getAuth, 
+  signInWithPopup, 
+  signInWithRedirect, 
+  GoogleAuthProvider, 
+  createUserWithEmailAndPassword, signInWithEmailAndPassword 
+} from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -16,7 +21,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const firebaseApp = initializeApp(firebaseConfig);
+initializeApp(firebaseConfig);
 const firebaseAuth = getAuth();
 const googleAuthProvider = new GoogleAuthProvider();
 googleAuthProvider.setCustomParameters({
@@ -26,38 +31,21 @@ googleAuthProvider.setCustomParameters({
 
 /* Sign in with popup module */
 const googleSignInWithPopup = () => signInWithPopup(firebaseAuth, googleAuthProvider)
-//   .then((result) => {
-//     // console.log(result);
-//     createUserDocInFireStore(result.user)
-//   })
-//   .catch((error) => {
-//     console.log(error.message);
-//   })
-// }
 
 /* Sign in with redirect */
 const googleSignInWithRedirect = () => signInWithRedirect(firebaseAuth, googleAuthProvider)
-//   .then((result) => {
-//     console.log(result);
-//     return result
-//   })
-//   .catch((error) => {
-//     console.log(error.message);
-//   })
-// }
+
+const googleCreateUserWithEmailAndPassword = (email, password) => createUserWithEmailAndPassword(firebaseAuth, email, password)
 
 const firestoreDB = getFirestore();
 
-const createUserDocInFireStore = async (user) => {
-  // console.log(user);
+const createUserDocInFireStore = async (user, userInfo = {}) => {
   // prepare the firestore document
   const document = doc(firestoreDB, "users", user.uid);
-
   // Get the document in firestore db
   const getDocument = await getDoc(document);
-  // console.log(getDocument);
-
   // Check the document is exist in fire base. If not exist create an entry in firestore
+  // console.log(userInfo);
   if (!getDocument.exists()) {
     
     const {displayName, email} = user;
@@ -66,7 +54,7 @@ const createUserDocInFireStore = async (user) => {
     try {
       await setDoc(document, 
         {
-          displayName, email, date
+          displayName, email, date, ...userInfo
         });
     } catch (error) {
       console.log(error);
@@ -74,4 +62,6 @@ const createUserDocInFireStore = async (user) => {
   }
 }
 
-export {firebaseAuth, googleSignInWithPopup, googleSignInWithRedirect, createUserDocInFireStore};
+const googleSignInWithEmailAndPassword = (email, password) => signInWithEmailAndPassword(firebaseAuth, email, password);
+
+export {firebaseAuth, googleSignInWithPopup, googleSignInWithRedirect, createUserDocInFireStore, googleCreateUserWithEmailAndPassword, googleSignInWithEmailAndPassword};

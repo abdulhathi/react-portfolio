@@ -14,6 +14,7 @@ const PortfolioRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Navigation />}>
+        <Route path="" element={<Main />}></Route>
         <Route path="home" element={<Main />}></Route>
         <Route path="education" element={<Education />}></Route>
         <Route path="experience" element={<Experience />}></Route>

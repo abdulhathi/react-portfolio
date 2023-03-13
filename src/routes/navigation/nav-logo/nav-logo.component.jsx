@@ -11,7 +11,7 @@ class NavLogo extends Component {
           src={LibraryImage}
           alt="IslamicLibraryOnline.com"
         /> */}
-        <h1 className="nav--logo h1--primary">Portfolio</h1>
+        <h1 className="nav--logo h1--primary">TechHathi</h1>
       </div>
     );
   }

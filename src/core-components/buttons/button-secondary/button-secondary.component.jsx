@@ -1,11 +1,10 @@
 import "./button-secondary.styles.scss";
 
 const ButtonSecondary = (props) => {
-  const { text, onClick } = props;
   return (
     <div>
-      <button className="btn--secondary" onClick={onClick}>
-        {text}
+      <button className="btn--secondary" {...props}>
+        {props["text"]}
       </button>
     </div>
   );

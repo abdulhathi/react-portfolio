@@ -5,6 +5,10 @@ import ButtonPrimary from "../../../core-components/buttons/button-primary/butto
 import ButtonSecondary from "../../../core-components/buttons/button-secondary/button-secondary.component";
 import "./sign-up.styles.scss";
 import { useState } from "react";
+import {
+  googleCreateUserWithEmailAndPassword,
+  createUserDocInFireStore,
+} from "../../../utils/firebase-utils.js";
 
 const signUpFormFields = {
   displayName: "",
@@ -18,10 +22,33 @@ const SignUp = () => {
   const { displayName, email, password, confirmPassword } = formFields;
 
   const handleOnChange = (event) => {
-    // console.log(event.target.name, event.target.value)
     const { name, value } = event.target;
     setFormFields({ ...formFields, [name]: value });
-    console.log(formFields);
+  };
+
+  const onSubmitSignUp = (event) => {
+    event.preventDefault();
+    googleCreateUserWithEmailAndPassword(email, password)
+      .then((result) => {
+        console.log(result);
+        const user = result.user;
+        createUserDocInFireStore(user, { displayName });
+        alert("User account created successfully.");
+        setFormFields(signUpFormFields);
+      })
+      .catch((error) => {
+        console.log(error);
+        if (error.code === "auth/email-already-in-use") {
+          alert("User already exist !!!");
+        }
+        if (error.code === "auth/weak-password") {
+          alert(error.message);
+        }
+      });
+  };
+  const onReset = (event) => {
+    event.preventDefault();
+    setFormFields(signUpFormFields);
   };
 
   return (
@@ -30,7 +57,11 @@ const SignUp = () => {
         <HeadingOnePrimary text="Sign Up"></HeadingOnePrimary>
         <HeadingThree text="Sign up with your email and password"></HeadingThree>
       </div>
-      <form onSubmit={() => {}} className="signup-form-container">
+      <form
+        onSubmit={onSubmitSignUp}
+        className="signup-form-container"
+        onReset={onReset}
+      >
         <InputTextPrimary
           type="text"
           name="displayName"
@@ -68,8 +99,8 @@ const SignUp = () => {
           onChange={handleOnChange}
         />
         <div className="signup-btngroup-container">
-          <ButtonPrimary text="Sign Up"></ButtonPrimary>
-          <ButtonSecondary text="Reset"></ButtonSecondary>
+          <ButtonPrimary text="Sign Up" type="submit"></ButtonPrimary>
+          <ButtonSecondary text="Reset" type="reset"></ButtonSecondary>
         </div>
       </form>
     </div>
