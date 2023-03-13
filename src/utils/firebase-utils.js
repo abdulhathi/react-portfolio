@@ -6,7 +6,8 @@ import { getAuth,
   GoogleAuthProvider, 
   createUserWithEmailAndPassword, 
   signInWithEmailAndPassword,
-  signOut
+  signOut,
+  onAuthStateChanged
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -68,6 +69,8 @@ const googleSignInWithEmailAndPassword = (email, password) => signInWithEmailAnd
 
 const firebaseSignOut = () => signOut(firebaseAuth);
 
+const authStateChange = (stateChangeCallback) => onAuthStateChanged(firebaseAuth, stateChangeCallback);
+
 export {
   firebaseAuth, 
   googleSignInWithPopup, 
@@ -75,5 +78,6 @@ export {
   createUserDocInFireStore, 
   googleCreateUserWithEmailAndPassword, 
   googleSignInWithEmailAndPassword,
-  firebaseSignOut
+  firebaseSignOut,
+  authStateChange
 };
