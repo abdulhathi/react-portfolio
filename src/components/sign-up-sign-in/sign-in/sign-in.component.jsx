@@ -16,15 +16,21 @@ import ButtonSecondary from "../../../core-components/buttons/button-secondary/b
 import GoogleIcon from "../../../assets/icon/Google.svg";
 import AppleIcon from "../../../assets/icon/Apple.svg";
 
+import { useContext } from "react";
+import { UserContext } from "../../../context/user.context";
+
 const signInFormObject = {
   email: "",
   password: "",
 };
 
 const SignIn = () => {
+  /* React hooks start */
   const [signInFormFields, setSignInFormFields] = useState(signInFormObject);
   const { email, password } = signInFormFields;
 
+  const { setCurrentUser } = useContext(UserContext);
+  /* React hooks end */
   useEffect(() => {
     getRedirectResult(firebaseAuth).then((result) => {
       if (result) {
@@ -35,7 +41,13 @@ const SignIn = () => {
 
   const onSignInWithGoogle = (event) => {
     googleSignInWithPopup().then((result) => {
-      createUserDocInFireStore(result.user);
+      createUserDocInFireStore(result.user)
+        .then((result) => {
+          setCurrentUser(result.user);
+        })
+        .catch((error) => {
+          popError(error);
+        });
     });
   };
 
@@ -47,23 +59,11 @@ const SignIn = () => {
     event.preventDefault();
     googleSignInWithEmailAndPassword(email, password)
       .then((result) => {
-        console.log(result.user);
+        console.log(result);
+        setCurrentUser(result.user);
       })
       .catch((error) => {
-        switch (error.code) {
-          case "auth/popup-closed-by-user":
-            alert("Popup closed by user.");
-            break;
-          case "auth/user-not-found":
-            alert("Invalid user.");
-            break;
-          case "auth/wrong-password":
-            alert("Invalid password.");
-            break;
-          default:
-            alert(error);
-            break;
-        }
+        popError(error);
       });
   };
 
@@ -76,6 +76,25 @@ const SignIn = () => {
     // console.log(name, value);
     setSignInFormFields({ ...signInFormFields, [name]: value });
   };
+
+  // Catech errors
+  const popError = (error) => {
+    switch (error.code) {
+      case "auth/popup-closed-by-user":
+        alert("Popup closed by user.");
+        break;
+      case "auth/user-not-found":
+        alert("Invalid user.");
+        break;
+      case "auth/wrong-password":
+        alert("Invalid password.");
+        break;
+      default:
+        alert(error);
+        break;
+    }
+  };
+  //
   return (
     <div className="signin-container">
       <div className="signin-heading-container">

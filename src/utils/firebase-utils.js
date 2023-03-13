@@ -4,7 +4,9 @@ import { getAuth,
   signInWithPopup, 
   signInWithRedirect, 
   GoogleAuthProvider, 
-  createUserWithEmailAndPassword, signInWithEmailAndPassword 
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword,
+  signOut
 } from 'firebase/auth';
 import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -64,4 +66,14 @@ const createUserDocInFireStore = async (user, userInfo = {}) => {
 
 const googleSignInWithEmailAndPassword = (email, password) => signInWithEmailAndPassword(firebaseAuth, email, password);
 
-export {firebaseAuth, googleSignInWithPopup, googleSignInWithRedirect, createUserDocInFireStore, googleCreateUserWithEmailAndPassword, googleSignInWithEmailAndPassword};
+const firebaseSignOut = () => signOut(firebaseAuth);
+
+export {
+  firebaseAuth, 
+  googleSignInWithPopup, 
+  googleSignInWithRedirect, 
+  createUserDocInFireStore, 
+  googleCreateUserWithEmailAndPassword, 
+  googleSignInWithEmailAndPassword,
+  firebaseSignOut
+};
