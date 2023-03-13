@@ -69,7 +69,7 @@ const googleSignInWithEmailAndPassword = (email, password) => signInWithEmailAnd
 
 const firebaseSignOut = () => signOut(firebaseAuth);
 
-const authStateChange = (stateChangeCallback) => onAuthStateChanged(firebaseAuth, stateChangeCallback);
+const authStateChangeListener = (stateChangeCallback) => onAuthStateChanged(firebaseAuth, stateChangeCallback);
 
 export {
   firebaseAuth, 
@@ -79,5 +79,5 @@ export {
   googleCreateUserWithEmailAndPassword, 
   googleSignInWithEmailAndPassword,
   firebaseSignOut,
-  authStateChange
+  authStateChangeListener
 };
