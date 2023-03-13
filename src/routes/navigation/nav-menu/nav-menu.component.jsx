@@ -17,14 +17,19 @@ const navMenuList = [
 
 const NavMenu = () => {
   const { currentUser, setCurrentUser } = useContext(UserContext);
+  const signIn = navMenuList[7];
   if (currentUser) {
-    navMenuList[7] = { ["linkName"]: "Sign Out" };
+    navMenuList[7] = {
+      ...signIn,
+      linkName: "Sign Out",
+      linkIcon: "fa-circle-user",
+    };
   } else {
-    navMenuList[7] = { ["linkName"]: "Sign In" };
+    navMenuList[7] = { ...signIn, linkName: "Sign In", linkIcon: "" };
   }
   return (
     <div className="nav--menu list">
-      {navMenuList.map(({ id, linkName, link }) => {
+      {navMenuList.map(({ id, linkName, link, linkIcon = "" }) => {
         return (
           <Link
             name={linkName}
@@ -50,6 +55,11 @@ const NavMenu = () => {
             }}
           >
             {linkName}
+            {linkIcon ? (
+              <span className={`fa fa-regular ${linkIcon}`}></span>
+            ) : (
+              ""
+            )}
           </Link>
         );
       })}
