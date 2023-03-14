@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./nav-menu.styles.scss";
+import "./nav-menu-popup.styles.scss";
 
 const navMenuList = [
   { id: 1, linkName: "Home", link: "/home" },
@@ -12,8 +12,7 @@ const navMenuList = [
   // { id: 8, linkName: "Sign In", link: "/signin" },
 ];
 
-const NavMenu = () => {
-  
+const NavMenuPopup = () => {
   return (
     <div className="nav--menu list">
       {navMenuList.map(({ id, linkName, link, linkIcon = "" }) => {
@@ -32,15 +31,11 @@ const NavMenu = () => {
             }}
           >
             {linkName}
-            {linkIcon ? (
-              <span className={`fa fa-regular ${linkIcon}`}></span>
-            ) : (
-              ""
-            )}
+            {linkIcon && <span className={`fa fa-regular ${linkIcon}`}></span>}
           </Link>
         );
       })}
     </div>
   );
 };
-export default NavMenu;
+export default NavMenuPopup;

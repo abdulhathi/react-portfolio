@@ -1,0 +1,32 @@
+/* Buttons styles start */
+.btn-mini-primary {
+  padding: 0.3rem 1.5rem;
+  font-size: 1.5rem;
+  font-family: var(--font--secondary);
+  font-weight: 500;
+  border-radius: 5px;
+  border-width: 1.2px;
+  border-style: solid;
+  cursor: pointer;
+  // margin: 0.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: var(--color--primary);
+  color: var(--color--light);
+  border-color: var(--color--primary);
+  letter-spacing: 0.03rem;
+}
+.btn-mini-primary:hover {
+  background: var(--color--primary--dark);
+  color: var(--color--light);
+  box-shadow: 0 0 2px var(--color--primary--dark);
+}
+.searchIcon {
+  height: 2rem;
+  margin-right: 0.5rem;
+  color: #fff;
+  fill: #fff;
+}
+/* Buttons styles end */

@@ -16,9 +16,6 @@ import ButtonSecondary from "../../../core-components/buttons/button-secondary/b
 import GoogleIcon from "../../../assets/icon/Google.svg";
 import AppleIcon from "../../../assets/icon/Apple.svg";
 
-import { useContext } from "react";
-import { UserContext } from "../../../context/user.context";
-
 const signInFormObject = {
   email: "",
   password: "",
@@ -29,7 +26,6 @@ const SignIn = () => {
   const [signInFormFields, setSignInFormFields] = useState(signInFormObject);
   const { email, password } = signInFormFields;
 
-  const { setCurrentUser } = useContext(UserContext);
   /* React hooks end */
   useEffect(() => {
     getRedirectResult(firebaseAuth).then((result) => {
@@ -40,15 +36,11 @@ const SignIn = () => {
   }, []);
 
   const onSignInWithGoogle = (event) => {
-    googleSignInWithPopup().then((result) => {
-      createUserDocInFireStore(result.user)
-        .then((result) => {
-          setCurrentUser(result.user);
-        })
-        .catch((error) => {
-          popError(error);
-        });
-    });
+    googleSignInWithPopup()
+      .then((result) => {})
+      .catch((error) => {
+        popError(error);
+      });
   };
 
   const onSignInClickForRedirect = async (event) => {
@@ -58,10 +50,7 @@ const SignIn = () => {
   const onSignInClick = (event) => {
     event.preventDefault();
     googleSignInWithEmailAndPassword(email, password)
-      .then((result) => {
-        console.log(result);
-        setCurrentUser(result.user);
-      })
+      .then((result) => {})
       .catch((error) => {
         popError(error);
       });

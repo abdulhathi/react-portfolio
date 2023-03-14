@@ -1,0 +1,47 @@
+.skills-container {
+  min-height: 93.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ul {
+    padding: 0;
+  }
+}
+.allskills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3rem;
+}
+.skill-row-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: left;
+  flex-wrap: wrap;
+  min-width: 35rem;
+  margin: 1rem 0rem;
+}
+.skillnamepercent-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1rem;
+  // font-weight: normal;
+}
+.skillName-container {
+  
+}
+.progress-container {
+  border-radius: 5px;
+  background: lightgray;
+  height: 16px;
+  width: 100%;
+}
+.progress-bar-container {
+  border-radius: 5px;
+  height: 16px;
+  background: rgba(71, 165, 0, 0.784);
+  // box-shadow: 0 0 10px rgb(0, 0, 0);
+}

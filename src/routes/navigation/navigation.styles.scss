@@ -1,10 +1,21 @@
+.navbar-container {
+  display: flex;
+  justify-content:space-between;
+  box-shadow: 0 0 10px gray;
+  align-items: center;
+  padding: 0rem 0.5rem;
+}
+.btnSignIn {
+  width: 7.5rem;
+}
 .navigation-container {
-  padding: 0rem 1rem;
+  width: 100%;
+  padding: 0rem 0rem;
   display: flex;
   justify-content:space-between;
   align-items: center;
   flex-wrap: wrap;
-  box-shadow: 0 0 10px gray;
+  
   // height: 10px;
   // opacity: 0;
   // max-height: 0;
@@ -46,3 +57,13 @@
 //     max-height: 100vh;
 //   }
 // }
+.nav-user {
+  margin: 0rem 0.5rem;
+  font-size: 3rem;
+  color: var(--color--primary);
+  cursor: pointer;
+}
+.nav-user:hover {
+  border-radius: 50px;
+  box-shadow: 0 0 5px var(--color--primary);
+}

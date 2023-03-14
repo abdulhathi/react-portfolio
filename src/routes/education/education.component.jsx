@@ -1,7 +1,7 @@
 import EducationImage from "../../assets/education.png";
 import HeadingOneUltimate from "../../core-components/headings/heading-one-ultimate/heading-one-ultimate.component";
 import HeadingOnePrimary from "../../core-components/headings/heading-one-primary/heading-one-primary.component";
-import HeadingTwo from "../../core-components/headings/heading-two/heading-two.component";
+import HeadingTwoPrimary from "../../core-components/headings/heading-two-primary/heading-two-primary.component";
 import HeadingThree from "../../core-components/headings/heading-three/heading-three.component";
 import "./education.styles.scss";
 
@@ -13,8 +13,8 @@ const Education = () => {
         <img className="education-image" src={EducationImage} alt="" />
         <div className="education-description">
           <HeadingOnePrimary text="B-Tech"></HeadingOnePrimary>
-          <HeadingTwo text="Information Technology"></HeadingTwo>
-          <HeadingTwo text="Anna University"></HeadingTwo>
+          <HeadingTwoPrimary text="Information Technology"></HeadingTwoPrimary>
+          <HeadingTwoPrimary text="Anna University"></HeadingTwoPrimary>
           <HeadingThree text="Year : 2001 - 2005"></HeadingThree>
         </div>
       </div>
