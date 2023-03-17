@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CartPopupContext } from "../../../context/cart-popup.context";
 
 const CartIcon = (props) => {
-  const { isCartOpen, setIsCartOpen } = useContext(CartPopupContext);
+  const { isCartOpen, setIsCartOpen, cartCount } = useContext(CartPopupContext);
   return (
     <div
       className="cart-icon-container"
@@ -14,7 +14,7 @@ const CartIcon = (props) => {
       }}
     >
       <Cart className="cart-icon-image"></Cart>
-      <span className="item-count">0</span>
+      <span className="item-count">{cartCount}</span>
     </div>
   );
 };

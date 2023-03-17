@@ -4,8 +4,8 @@ import ShoppingCartRoutes from './components/shopping-cart/shoppingcart-routes.c
 
 function App() {
   return (
-    <PortfolioRoutes></PortfolioRoutes>
-    // <ShoppingCartRoutes></ShoppingCartRoutes>
+    // <PortfolioRoutes></PortfolioRoutes>
+    <ShoppingCartRoutes></ShoppingCartRoutes>
   );
 }
 
