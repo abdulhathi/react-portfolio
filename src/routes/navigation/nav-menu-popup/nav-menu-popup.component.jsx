@@ -7,7 +7,7 @@ const navMenuList = [
   { id: 3, linkName: "Education", link: "/education" },
   { id: 4, linkName: "Experience", link: "experience" },
   { id: 5, linkName: "Skills", link: "/skills" },
-  { id: 6, linkName: "Certification", link: "/certification" },
+  { id: 6, linkName: "Certification", link: "/certification?cert=dsa" },
   { id: 7, linkName: "Contact Us", link: "/contactus" },
   // { id: 8, linkName: "Sign In", link: "/signin" },
 ];
