@@ -1,0 +1,23 @@
+.cartpopup-container {
+  position: absolute;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  border: 1px solid black;
+  background: var(--color--header--primary);
+  top: 45px;
+  right: 10px;
+  z-index: 5;
+  padding: 5px;
+}
+.cartitem-container {
+  min-height: 250px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+ButtonPrimaryMini {
+  // margin-top: auto;
+}

@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { Outlet, Link } from "react-router-dom";
 import "./navigation.styles.scss";
 import NavToggler from "../navigation/nav-toggler/nav-toggler.component";
-import NavLogo from "./nav-logo/nav-logo.component";
+import NavLogo from "../../components/navbar/nav-logo/nav-logo.component";
 import NavMenuPopup from "./nav-menu-popup/nav-menu-popup.component";
 import ButtonPrimaryMini from "../../core-components/buttons/button-primary-mini/button-primary-mini.component";
 import { useContext } from "react";
@@ -42,7 +42,7 @@ const Navigation = () => {
         <div className="navbar-container">
           <div className="navigation-container">
             <Link className="logo-container" to="/home">
-              <NavLogo></NavLogo>
+              <NavLogo>Portfolio</NavLogo>
             </Link>
             <NavToggler></NavToggler>
             <NavMenuPopup></NavMenuPopup>

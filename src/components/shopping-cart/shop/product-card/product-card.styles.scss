@@ -1,0 +1,12 @@
+.product {
+  width: 30rem;
+  .product-image {
+    width: 100%;
+    height: 95%;
+    object-fit: cover;
+  }
+}
+.product-detail {
+  display: flex;
+  justify-content: space-between;
+}

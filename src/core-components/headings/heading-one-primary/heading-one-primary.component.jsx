@@ -1,11 +1,16 @@
 import { Component } from "react";
 import "./heading-one-primary.styles.scss";
 
-class HeadingOnePrimary extends Component {
-  render() {
-    const { text } = this.props;
-    return <h1 className="header--one--primary">{text}</h1>;
-  }
-}
+const HeadingOnePrimary = (props) => {
+  const { text } = props;
+  const children = props["children"];
+
+  return (
+    <h1 className="header--one--primary">
+      {text}
+      {children}
+    </h1>
+  );
+};
 
 export default HeadingOnePrimary;

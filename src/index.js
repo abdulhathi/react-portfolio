@@ -5,13 +5,22 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import {UserProvider} from './provider/user.provider';
+import { NavMenuListProvider } from './provider/nav-menu-list.provider';
+import { ProductsProvider } from './provider/products.provider';
+import { CartPopupProvider } from './provider/cart-popup.provider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <UserProvider>
-        <App />
+        <NavMenuListProvider>
+          <ProductsProvider>
+            <CartPopupProvider>
+              <App />
+            </CartPopupProvider>
+          </ProductsProvider>
+        </NavMenuListProvider>
       </UserProvider>
     </BrowserRouter>
   </React.StrictMode>

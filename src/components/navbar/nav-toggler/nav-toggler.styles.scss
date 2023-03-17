@@ -1,0 +1,17 @@
+.nav--toggler {
+  font-size: 2rem;
+  border: 2px solid rgba(211, 211, 211, 0.5);
+  padding: 0.4rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.nav--toggler:hover {
+  box-shadow: 0 0 5px gray;
+  transition: all 0.5s;
+}
+@media screen and (min-width: 768px) {
+  .nav--toggler {
+      display: none;
+      opacity: 0;
+  }
+}
