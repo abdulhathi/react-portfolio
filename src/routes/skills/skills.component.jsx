@@ -5,6 +5,7 @@ import HeadingThree from "../../core-components/headings/heading-three/heading-t
 import HeadingTwoPrimary from "../../core-components/headings/heading-two-primary/heading-two-primary.component";
 
 const Skills = () => {
+  
   return (
     <div className="skills-container">
       <HeadingOnePrimary text="My Skills"></HeadingOnePrimary>

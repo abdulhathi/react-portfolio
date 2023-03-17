@@ -17,6 +17,12 @@
   align-items: center;
 }
 .cert-nav-link {
-  margin: 1rem;
+  font-weight: 500;
+  padding: 1rem;
+  color: var(--color--header--secondary);
+  cursor: pointer;
   text-transform: uppercase;
+}
+.cert-nav-link:hover {
+  color: var(--color--secondary);
 }
