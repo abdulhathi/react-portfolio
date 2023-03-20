@@ -8,6 +8,7 @@ import {UserProvider} from './provider/user.provider';
 import { NavMenuListProvider } from './provider/nav-menu-list.provider';
 import { ProductsProvider } from './provider/products.provider';
 import { CartPopupProvider } from './provider/cart-popup.provider';
+import { CategoriesProvider } from './provider/categories.provider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,11 +16,13 @@ root.render(
     <BrowserRouter>
       <UserProvider>
         <NavMenuListProvider>
-          <ProductsProvider>
-            <CartPopupProvider>
-              <App />
-            </CartPopupProvider>
-          </ProductsProvider>
+          <CategoriesProvider>
+            <ProductsProvider>
+              <CartPopupProvider>
+                <App />
+              </CartPopupProvider>
+            </ProductsProvider>
+          </CategoriesProvider>
         </NavMenuListProvider>
       </UserProvider>
     </BrowserRouter>

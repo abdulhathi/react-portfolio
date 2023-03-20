@@ -7,6 +7,8 @@ const CartPopupContext = createContext({
   setCartItems: () => null,
   cartCount: 0,
   setCartCount: () => null,
+  subTotal: 0,
+  setSubTotal: () => null,
 });
 
 export { CartPopupContext };

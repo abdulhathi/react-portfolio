@@ -1,0 +1,16 @@
+.addproduct-container {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .addproduct-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .btn-container {
+    display: flex;
+    flex-direction: row;
+  }
+}

@@ -1,5 +1,7 @@
 [
   {"id": 0, "name": "Home", "link": "home"},
+
   {"id": 1, "name": "Shop", "link": "shop"},
-  {"id": 2, "name": "Cart", "link": "cart"}
+  {"id": 2, "name": "Shop by Category", "link": "shop-by-category"},
+  {"id": 3, "name": "AddProdcut", "link": "addproduct"}
 ]

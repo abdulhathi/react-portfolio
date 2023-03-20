@@ -18,7 +18,6 @@
   // "git.autofetch": true,
   // Auto suggession off End
   "editor.tabSize": 2,
-  "workbench.colorTheme": "MonoNext",
   "editor.fontLigatures": true,
   "explorer.compactFolders": false,
   "files.autoSave": "afterDelay",

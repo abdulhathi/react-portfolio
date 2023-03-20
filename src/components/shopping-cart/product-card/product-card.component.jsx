@@ -1,7 +1,7 @@
-import ButtonPrimaryMini from "../../../../core-components/buttons/button-primary-mini/button-primary-mini.component";
+import ButtonPrimaryMini from "../../../core-components/buttons/button-primary-mini/button-primary-mini.component";
 import "./product-card.styles.scss";
 import { useContext } from "react";
-import { CartPopupContext } from "../../../../context/cart-popup.context";
+import { CartPopupContext } from "../../../context/cart-popup.context";
 
 const ProductCard = (props) => {
   const { setCartItems } = useContext(CartPopupContext);

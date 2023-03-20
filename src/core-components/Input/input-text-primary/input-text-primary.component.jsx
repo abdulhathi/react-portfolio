@@ -1,16 +1,17 @@
 import "./input-text-primary.styles.scss";
 
-const InputTextPrimary = ({ name, id, placeholder, type, required, value, onChange }) => {
+const InputTextPrimary = (props) => {
   return (
     <input
-      type={type}
-      placeholder={placeholder}
-      name={name}
-      id={id}
       className="input-text"
-      required={required}
-      value={value}
-      onChange={onChange}
+      {...props}
+      // type={type}
+      // placeholder={placeholder}
+      // name={name}
+      // id={id}
+      // required={required}
+      // value={value}
+      // onChange={onChange}
     ></input>
   );
 };

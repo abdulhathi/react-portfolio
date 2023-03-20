@@ -30,14 +30,14 @@ const SignUp = () => {
     event.preventDefault();
     googleCreateUserWithEmailAndPassword(email, password)
       .then((result) => {
-        console.log(result);
+        // console.log(result);
         const user = result.user;
         createUserDocInFireStore(user, { displayName });
         alert("User account created successfully.");
         setFormFields(signUpFormFields);
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
         if (error.code === "auth/email-already-in-use") {
           alert("User already exist !!!");
         }

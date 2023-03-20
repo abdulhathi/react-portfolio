@@ -5,14 +5,21 @@ const CartPopupProvider = ({ children }) => {
   const [isCartOpen, setIsCartOpen] = useState(false);
   const [cartItems, setDistinctCartItems] = useState(new Map());
   const [cartCount, setCartCount] = useState(0);
+  const [subTotal, setSubTotal] = useState(0);
 
-  const setCartItems = (item) => {
-    if (!cartItems.has(item)) {
-      cartItems.set(item, 0);
+  const setCartItems = (product) => {
+    if (!cartItems.has(product.id)) {
+      cartItems.set(product.id, product);
     }
-    cartItems.set(item, cartItems.get(item) + 1);
+    const currCartItem = cartItems.get(product.id);
+
+    cartItems.set(product.id, {
+      ...currCartItem,
+      quantity: currCartItem.quantity ? currCartItem.quantity + 1 : 1,
+    });
     setDistinctCartItems(cartItems);
     setCartCount(cartItems.size);
+    setSubTotal(subTotal + product.price);
   };
 
   const value = {
@@ -22,6 +29,8 @@ const CartPopupProvider = ({ children }) => {
     setCartItems,
     cartCount,
     setCartCount,
+    subTotal,
+    setSubTotal,
   };
   return (
     <CartPopupContext.Provider value={value}>

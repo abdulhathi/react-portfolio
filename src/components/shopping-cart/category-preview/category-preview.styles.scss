@@ -1,0 +1,29 @@
+.shopbycat-heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.category-root-container {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.category-container {
+  // width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 2rem;
+}
+.category-heading-container {
+  
+}
+.category-product-container {
+  // width: 100vw;
+  display: flex;
+  // overflow: scroll;
+  flex-wrap: wrap;
+  // justify-content: center;
+  column-gap: 2rem;
+}

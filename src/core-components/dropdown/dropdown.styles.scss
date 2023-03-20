@@ -1,0 +1,26 @@
+.dropdown-root-container {
+  position: relative;
+}
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  position: absolute;
+  top: 75px;
+  padding: 0.5rem;
+  background: white;
+  min-width: 15rem;
+  width: auto;
+  max-width: 30rem;
+  max-height: 15rem;
+  overflow: scroll;
+  border: 1px solid lightgray;
+}
+.dropdown-item-container {
+  cursor: pointer;
+  padding: 0.5rem;
+  &:hover {
+    background: var(--color--secondary);
+    color:white
+  }
+}
