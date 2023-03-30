@@ -15,6 +15,7 @@ import InputTextPrimary from "../../../core-components/Input/input-text-primary/
 import ButtonSecondary from "../../../core-components/buttons/button-secondary/button-secondary.component";
 import GoogleIcon from "../../../assets/icon/Google.svg";
 import AppleIcon from "../../../assets/icon/Apple.svg";
+import PopupMessage from "../../../core-components/popup-message/popup-message.component";
 
 const signInFormObject = {
   email: "",
@@ -24,6 +25,7 @@ const signInFormObject = {
 const SignIn = () => {
   /* React hooks start */
   const [signInFormFields, setSignInFormFields] = useState(signInFormObject);
+  const [showMessage, setShowMessage] = useState(false);
   const { email, password } = signInFormFields;
 
   /* React hooks end */
@@ -50,7 +52,12 @@ const SignIn = () => {
   const onSignInClick = (event) => {
     event.preventDefault();
     googleSignInWithEmailAndPassword(email, password)
-      .then((result) => {})
+      .then((result) => {
+        setShowMessage(true);
+        setTimeout(() => {
+          setShowMessage(false);
+        }, 2000);
+      })
       .catch((error) => {
         popError(error);
       });
@@ -86,6 +93,15 @@ const SignIn = () => {
   //
   return (
     <div className="signin-container">
+      {showMessage && (
+        <PopupMessage
+          onCloseMessage={(e) => {
+            setShowMessage(false);
+          }}
+        >
+          Signed in successfully
+        </PopupMessage>
+      )}
       <div className="signin-heading-container">
         <HeadingOnePrimary text="Sign In"></HeadingOnePrimary>
         <HeadingThree text="Sign In with your email and password"></HeadingThree>

@@ -1,5 +1,4 @@
 import Abdul from "../../assets/Circle_Clip_Abdul1.png";
-
 import ButtonOutline from "../../core-components/buttons/button-outline/button-outline.component";
 import "./main.styles.scss";
 

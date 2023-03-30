@@ -9,15 +9,18 @@
   align-items: center;
   // flex-wrap: wrap;
   color: var(--color--header--primary);
+  background: url(../../assets/IMG_1718.jpg);
 }
 
 .portfolio-image-container {
   width: 100%;
   height: auto;
   object-fit: cover;
-  box-shadow: 0 0 55px #09004e;
-  border-radius: 50%;
-  background: linear-gradient(to right, #f0f0f0d5, #4778f5, #f0f0f0d5) ;
+  // transform: rotate(8deg);
+  // z-index: 0;
+  // box-shadow: 0 0 55px #09004e;
+  // border-radius: 50%;
+  // background: linear-gradient(to right, #f0f0f0d5, #4778f5, #f0f0f0d5) ;
 }
 
 .name-container {

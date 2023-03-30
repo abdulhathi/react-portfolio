@@ -1,0 +1,17 @@
+[
+  { "id":1, "name": "Technical & System analysis", "percent": 60},
+  { "id":2, "name": "Object oriented design-OOPS", "percent": 90},
+  { "id":3, "name": "Database application design", "percent": 40},
+  { "id":5, "name": "Web-based software engineering", "percent": 70},
+  { "id":6, "name": "Microservices &Automation", "percent": 55},
+  { "id":11, "name": "node.js", "percent": 46, "color": "red"},
+  { "id":18, "name": "Waterfall, Agile, codereview, CI/CD", "percent": 50, "color": "red"},
+  { "id":22, "name": "Postman, SOAPUI, Fiddler", "percent": 94, "color": "red"},
+  { "id":13, "name": "Entityframework", "percent": 74, "color": "red"},
+  { "id":14, "name": "GraphQL", "percent": 35, "color": "red"},
+  { "id":21, "name": "Azure-Blob, permission, keyvault & access token", "percent": 47, "color": "red"},
+  { "id":23, "name": "AWS Amplify & AWS Route53", "percent": 32, "color": "red"},
+  { "id":24, "name": "Firebase Authentication", "percent": 24, "color": "red"},
+  { "id":9, "name": "C#", "percent": 95, "color": "red"},
+  { "id":10, "name": "JavaScript", "percent": 75, "color": "red"}
+]

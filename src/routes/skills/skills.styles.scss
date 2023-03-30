@@ -2,7 +2,7 @@
   min-height: 93.5vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   ul {
     padding: 0;
@@ -27,10 +27,10 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  font-size: 1rem;
-  // font-weight: normal;
+  font-size: 1.1rem;
 }
 .skillName-container {
+
   
 }
 .progress-container {
@@ -44,4 +44,8 @@
   height: 16px;
   background: rgba(71, 165, 0, 0.784);
   // box-shadow: 0 0 10px rgb(0, 0, 0);
+  
+}
+.skill-text {
+  // font-weight: 400;
 }
