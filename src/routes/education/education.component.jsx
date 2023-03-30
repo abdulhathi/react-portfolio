@@ -12,7 +12,7 @@ const Education = () => {
       <div className="education-container">
         <img className="education-image" src={EducationImage} alt="" />
         <div className="education-description">
-          <HeadingOnePrimary text="B-Tech"></HeadingOnePrimary>
+          <HeadingOnePrimary text="Bachelor-of-Technology"></HeadingOnePrimary>
           <HeadingTwoPrimary text="Information Technology"></HeadingTwoPrimary>
           <HeadingTwoPrimary text="Anna University"></HeadingTwoPrimary>
           <HeadingThree text="Year : 2001 - 2005"></HeadingThree>

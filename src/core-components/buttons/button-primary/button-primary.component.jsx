@@ -9,7 +9,7 @@ const ButtonPrimary = (props) => {
         ) : (
           ""
         )}
-        {props["text"]}
+        {props["text"] || props["children"]}
       </button>
     </div>
   );

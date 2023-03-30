@@ -25,5 +25,6 @@
   "editor.formatOnSave": true,
   // "window.zoomLevel": 0.5,
   "editor.fontFamily": "Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace",
-  "editor.fontSize": 14.5
+  "editor.fontSize": 14.5,
+  "workbench.colorTheme": "MonoNext"
 }

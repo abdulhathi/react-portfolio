@@ -1,0 +1,41 @@
+.contactus-root-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .contactus-heading {
+    text-transform: uppercase;
+  }
+
+
+  .contact-image {
+  }
+
+  .contactus-body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactus-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .contactus-btn-group {
+    display: flex;
+  }
+}
+
+
+
+
+
+@media screen and (min-width: 768px) {
+  .contactus-root-container {
+    .contactus-body-container {
+      flex-direction: row;
+    }
+  }
+}
+
