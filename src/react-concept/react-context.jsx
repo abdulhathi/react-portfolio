@@ -4,20 +4,23 @@ import { NavMenuListProvider } from "../provider/nav-menu-list.provider";
 import { ProductsProvider } from "../provider/products.provider";
 import { CartPopupProvider } from "../provider/cart-popup.provider";
 import { CategoriesProvider } from "../provider/categories.provider";
+import { BrowserRouter } from "react-router-dom";
 
 const ReactContext = () => {
   return (
-    <UserProvider>
-      <NavMenuListProvider>
-        <CategoriesProvider>
-          <ProductsProvider>
-            <CartPopupProvider>
-              <App />
-            </CartPopupProvider>
-          </ProductsProvider>
-        </CategoriesProvider>
-      </NavMenuListProvider>
-    </UserProvider>
+    <BrowserRouter>
+      <UserProvider>
+        <NavMenuListProvider>
+          <CategoriesProvider>
+            <ProductsProvider>
+              <CartPopupProvider>
+                <App />
+              </CartPopupProvider>
+            </ProductsProvider>
+          </CategoriesProvider>
+        </NavMenuListProvider>
+      </UserProvider>
+    </BrowserRouter>
   );
 };
 

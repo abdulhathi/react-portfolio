@@ -6,8 +6,8 @@ import Todo from './components/todo/ todo.component';
 
 function App() {
   return (
-    // <PortfolioRoutes></PortfolioRoutes>
-    <Todo></Todo>
+    <PortfolioRoutes></PortfolioRoutes>
+    // <Todo></Todo>
     // <ShoppingCartRoutes></ShoppingCartRoutes>
     // <ReactRedux></ReactRedux>
   );
