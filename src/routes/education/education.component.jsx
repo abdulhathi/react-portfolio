@@ -1,4 +1,5 @@
 import EducationImage from "../../assets/education.png";
+import ClassroomImage from "../../assets/classroom.png";
 import HeadingOneUltimate from "../../core-components/headings/heading-one-ultimate/heading-one-ultimate.component";
 import HeadingOnePrimary from "../../core-components/headings/heading-one-primary/heading-one-primary.component";
 import HeadingTwoPrimary from "../../core-components/headings/heading-two-primary/heading-two-primary.component";
@@ -10,9 +11,9 @@ const Education = () => {
     <section className="education-section">
       <HeadingOneUltimate text="Education"></HeadingOneUltimate>
       <div className="education-container">
-        <img className="education-image" src={EducationImage} alt="" />
+        <img className="education-image" src={ClassroomImage} alt="" />
         <div className="education-description">
-          <HeadingOnePrimary text="Bachelor-of-Technology"></HeadingOnePrimary>
+          <HeadingOneUltimate text="Bachelor-of-Technology"></HeadingOneUltimate>
           <HeadingTwoPrimary text="Information Technology"></HeadingTwoPrimary>
           <HeadingTwoPrimary text="Anna University"></HeadingTwoPrimary>
           <HeadingThree text="Year : 2001 - 2005"></HeadingThree>

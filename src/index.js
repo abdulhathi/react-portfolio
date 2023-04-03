@@ -1,31 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.scss';
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { BrowserRouter } from 'react-router-dom';
-import {UserProvider} from './provider/user.provider';
-import { NavMenuListProvider } from './provider/nav-menu-list.provider';
-import { ProductsProvider } from './provider/products.provider';
-import { CartPopupProvider } from './provider/cart-popup.provider';
-import { CategoriesProvider } from './provider/categories.provider';
+import { Provider } from 'react-redux';
+import { store, persistor } from './store/store';
+import { PersistGate } from 'redux-persist/integration/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <UserProvider>
-        <NavMenuListProvider>
-          <CategoriesProvider>
-            <ProductsProvider>
-              <CartPopupProvider>
-                <App />
-              </CartPopupProvider>
-            </ProductsProvider>
-          </CategoriesProvider>
-        </NavMenuListProvider>
-      </UserProvider>
-    </BrowserRouter>
+    <Provider store={store}>
+      <PersistGate loading={<div>Loading...</div>} persistor={persistor}>
+        <BrowserRouter>
+          <App></App>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   </React.StrictMode>
 );
 

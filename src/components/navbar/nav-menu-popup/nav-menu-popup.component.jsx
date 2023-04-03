@@ -15,9 +15,11 @@ const NavMenuPopup = (props) => {
             onClick={(event) => {
               const navbar = document.querySelector(".navbar");
               const navToggler = document.querySelector(".nav--toggler");
-              navbar.classList.toggle("nav--menu--opener");
-              navToggler.classList.toggle("fa-bars");
-              navToggler.classList.toggle("fa-xmark");
+              if (navToggler) {
+                navbar.classList.toggle("nav--menu--opener");
+                navToggler.classList.toggle("fa-bars");
+                navToggler.classList.toggle("fa-xmark");
+              }
             }}
           >
             {name}

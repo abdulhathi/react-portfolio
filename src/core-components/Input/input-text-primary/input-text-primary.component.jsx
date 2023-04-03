@@ -3,8 +3,8 @@ import "./input-text-primary.styles.scss";
 const InputTextPrimary = (props) => {
   return (
     <input
-      className="input-text"
       {...props}
+      className={`${props["className"]} input-text`}
       // type={type}
       // placeholder={placeholder}
       // name={name}

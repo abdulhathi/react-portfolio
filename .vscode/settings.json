@@ -26,5 +26,6 @@
   // "window.zoomLevel": 0.5,
   "editor.fontFamily": "Operator Mono Lig, Menlo, Monaco, 'Courier New', monospace",
   "editor.fontSize": 14.5,
-  "workbench.colorTheme": "MonoNext"
+  "workbench.colorTheme": "MonoNext",
+  "todohighlight.isEnable": false
 }
