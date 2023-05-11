@@ -1,0 +1,13 @@
+.experienceRoot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  justify-content: left;
+}
+
+@media screen and (min-width: 740px) {
+  .experienceRoot {
+    
+  }
+}

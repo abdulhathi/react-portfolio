@@ -5,7 +5,7 @@ const navMenuList = [
   { id: 1, linkName: "Home", link: "/home" },
   { id: 2, linkName: "About Me", link: "/aboutme" },
   { id: 3, linkName: "Education", link: "/education" },
-  { id: 4, linkName: "Experience", link: "experience" },
+  { id: 4, linkName: "Experience", link: "/experience" },
   { id: 5, linkName: "Skills", link: "/skills" },
   { id: 6, linkName: "Certification", link: "/certification?cert=dsa" },
   { id: 7, linkName: "Contact Us", link: "/contactus" },
