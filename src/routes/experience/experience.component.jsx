@@ -7,10 +7,10 @@ const Experience = () => {
   const experience = [{
     companyName: "Cognizant Technology Solutions",
     startDate: "04/16/2010",
-    endDate: "04/16/2010",
+    endDate: "Till now",
     title: "Technical Lead",
     location: "Long beach, CA, USA",
-    jobDescription: ["Architecting the technical Solution and technical Design. Development of end-to- end application in Dotnet, Python and Azure environment and working to improve overall team performance.","Development of core business logic exposing over Web Services in REST API.",
+    jobDescription: ["Architecting the technical Solution and technical Design. Development of end-to-end application in Dotnet, Python and Azure environment and working to improve overall team performance.","Development of core business logic exposing over Web Services in REST API.",
     "Worked with project managers, developers, quality assurance and customers to resolve technical issues.",
     "Demonstrated experience and good hands-on programming experience Python, JavaScript, C# and React.",
     "Provided technical support using knowledge of complex technology to solve problems and support new projects.",
@@ -44,7 +44,7 @@ const Experience = () => {
       <HeadingOneUltimate>Experience</HeadingOneUltimate>
       <div className="experienceContainer">
       {
-        experience.map((exp) => <ExperienceChild experience={exp} key={exp.companyName}></ExperienceChild>)
+        experience.map((exp, ind) => <ExperienceChild experience={exp} key={ind}></ExperienceChild>)
       }
       </div>
   </div>

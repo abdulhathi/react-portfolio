@@ -7,7 +7,7 @@ const ExperienceChild = (props) => {
   // console.log(companyName, startDate)
   return (<div className="expChildContainer">
       <HeadingOnePrimary>{companyName}, {title}</HeadingOnePrimary>
-      <HeadingThree>{startDate} - {endDate} : {location}</HeadingThree>
+      <HeadingThree>{startDate} - {endDate} | {location}</HeadingThree>
       <ul>
         {jobDescription.map((desc,ind) => <li key={ind}>{desc}</li>)}
       </ul>
