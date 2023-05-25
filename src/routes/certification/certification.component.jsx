@@ -4,8 +4,8 @@ import "./certification.styles.scss";
 import { Link, useLocation } from "react-router-dom";
 import PythonCert from "../../assets/certs/certificate-of-completion-for-python.png";
 import HTMLCSSCert from "../../assets/certs/The Ultimate HTML5 And CSS3_Part1.jpg";
-import DSACert from "../../assets/certs/1-the-ultimate-typescript-course.png";
-import TypescriptCert from "../../assets/certs/UC-3BSD8H27_DSA.jpg";
+import DSACert from "../../assets/certs/UC-3BSD8H27_DSA.jpg";
+import TypescriptCert from "../../assets/certs/1-the-ultimate-typescript-course.png";
 import ButtonPrimary from "../../core-components/buttons/button-primary/button-primary.component";
 import { useNavigate } from "react-router-dom";
 
@@ -15,6 +15,7 @@ const Certification = () => {
     python: PythonCert,
     htmlcss: HTMLCSSCert,
     dsa: DSACert,
+    typescript: TypescriptCert
   };
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
