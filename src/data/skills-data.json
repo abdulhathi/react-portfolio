@@ -1,13 +1,23 @@
 [
-  
-  { "id":7, "name": "Data structure & Algorithm", "percent": 90, "color": "dodgerblue"},
-  { "id":8, "name": "Python, C# & JavaScript", "percent": 82, "color": "lightseagreen" },
-  { "id":12, "name": "React, React-Hooks", "percent": 57, "color": "maroon"},
-  { "id":15, "name": "HTML, SCSS, CSS3, bootstrap", "percent": 78, "color": "gold"},
-  { "id":16, "name": "Asp.NET, MVC & .NetCore", "percent": 73, "color": "cadetblue"},
-  { "id":17, "name": "RESTAPI, SOAP & WCF", "percent": 50, "color": "orange"},
-  { "id":19, "name": "MSSQL, NoSQL & Docker", "percent": 69, "color": "black"},
-  { "id":20, "name": "TFS, GIT & Azure-DevOps", "percent": 53, "color": "lightslategray"}
+  { "id":1, "name": "Responsive web application design", "percent": 100, "color": "green"},
+  { "id":2, "name": "Python, JavaScript, Typescript, C#", "percent": 100, "color": "blue"},
+  { "id":3, "name": "Technical & System analysis", "percent": 85, "color": "grey"},
+  { "id":4, "name": "Object oriented programming", "percent": 85, "color": "lightblue"},
+  { "id":5, "name": "Data structure & Algorithm", "percent": 85, "color": "dodgerblue"},
+  { "id":6, "name": "REST API & Web API", "percent": 85, "color": "lightseagreen" },
+  { "id":7, "name": "CSS3, SCSS, bootstrap", "percent": 85, "color": "maroon"},
+  { "id":8, "name": "ES6, HTML, React-JS, Redux", "percent": 65, "color": "gold"},
+  { "id":9, "name": "JQuery, Node.js & Express.js", "percent": 65, "color": "cadetblue"},
+  { "id":10, "name": "Asp.NET, MVC & .NetCore", "percent": 65, "color": "orange"},
+  { "id":11, "name": "SOAP, XML, JSON", "percent": 65, "color": "black"},
+  { "id":12, "name": "Waterfall, Agile", "percent": 65, "color": "lightslategray"},
+  { "id":13, "name": "MSSQL, NoSQL & Docker", "percent": 65, "color": "black"},
+  { "id":14, "name": "TFS, GIT & Azure DevOps", "percent": 65, "color": "lightslategray"},
+  { "id":15, "name": "Postman, SOAPUI & Swagger", "percent": 65, "color": "lightslategray"},
+  { "id":16, "name": "Agile, Code review & CI/CD", "percent": 65, "color": "black"},
+  { "id":17, "name": "Azure, GCP & AWS", "percent": 65, "color": "lightslategray"},
+  { "id":18, "name": "SSIS, ETL Process", "percent": 65, "color": "black"},
+  { "id":19, "name": "Trizetto & QNXT", "percent": 65, "color": "lightslategray"}
 ]
 
   
