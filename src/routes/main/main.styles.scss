@@ -1,5 +1,5 @@
 .main-container {
-  background: var(--color--secondary);
+  background: rgb(95, 95, 95);
   // width: 100vw;
   min-height: 93.9vh;
   display: flex;
@@ -9,17 +9,17 @@
   align-items: center;
   // flex-wrap: wrap;
   color: var(--color--header--primary);
-  background: url(../../assets/IMG_1718.jpg);
+  // background: url(../../assets/IMG_1718.jpg);
 }
 
 .portfolio-image-container {
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
-  transform: rotate(8deg);
+  transform: rotate(0deg);
   // z-index: 0;
-  // box-shadow: 0 0 55px #6e6e6e;
-  border-radius: 50%;
+  box-shadow: 0 0 55px #000000ba;
+  border-radius: 100%;
   // background: linear-gradient(to right, #f0f0f0d5, #4778f5, #f0f0f0d5) ;
 }
 
@@ -27,8 +27,6 @@
   font-size: 6rem;
   text-transform: uppercase;
 }
-
-
 
 @media screen and (min-width: 768px) {
   .main-container  {

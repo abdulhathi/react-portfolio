@@ -4,7 +4,7 @@ import "./button-outline.styles.scss";
 class ButtonOutline extends Component {
   render() {
     const { text } = this.props;
-    return <button className="btn--outline--light">{text}</button>;
+    return <button className="btn--outline--light" onClick={(e) => console.log("hi")}>{text}</button>;
   }
 }
 

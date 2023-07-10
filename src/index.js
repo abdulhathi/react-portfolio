@@ -4,12 +4,14 @@ import './index.scss';
 import reportWebVitals from "./reportWebVitals";
 import ReactContext from "./react-concept/react-context";
 import ReactReduxThunk from './react-concept/react-redux-thunk';
+import Test from './core-components/test/test.component';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <ReactReduxThunk></ReactReduxThunk> */}
     <ReactContext></ReactContext>
+    
   </React.StrictMode>
 );
 
