@@ -25,7 +25,7 @@ const AboutMe = () => {
           alt="Web developer"
         />
         <div className="aboutme-details">
-          <HeadingOnePrimary text="UI/UX Designer & Web Developer"></HeadingOnePrimary>
+          <HeadingOnePrimary text="Technical Lead"></HeadingOnePrimary>
           <p>
             Innovative and technically astute with 16 years of experience.
             Well-versed in analyzing user needs and developing software to
